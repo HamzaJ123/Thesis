@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitTrack | Your Fitness Partner</title>
+    <link rel="stylesheet" href="../css/Index.css" />
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/navbar.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">FitTrack</div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li id="registerNavItem"><a href="register.html">Register</a></li>
+            <li id="loginNavItem"><a href="#" id="loginBtn">Login</a></li>
+            <li id="profileNavItem" style="display: none;"><a href="profile.html">Profile</a></li>
+            <li><a href="bmi.html">BMI</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+            <li><a href="premium.html">Premium</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Transform Your Body & Mind</h1>
+        <p>Track your calories, calculate your BMI, and get personalized meal plans.</p>
+        <a href="register.html" class="cta-button">Get Started</a>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <div class="feature">
+        <h2>💪 Workout Tracking</h2>
+        <p>Monitor your daily activities and track progress efficiently.</p>
+    </div>
+    <div class="feature">
+        <h2>🍎 Nutrition Planning</h2>
+        <p>Get meal suggestions tailored to your goals and lifestyle.</p>
+    </div>
+    <div class="feature">
+        <h2>📊 Progress Insights</h2>
+        <p>Visualize your health journey with charts and analytics.</p>
+    </div>
+</section>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required />
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <p id="loginMessage"></p>
+        <p class="register-link">Don’t have an account? <a href="register.html">Register</a></p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 FitTrack. All rights reserved.</p>
+</footer>
+</body>
+</html>

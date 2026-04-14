@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitTrack | Profile</title>
+  <link rel="stylesheet" href="../css/profile.css" />
+  <script defer src="../js/profile.js"></script>
+  <script defer src="../js/navbar.js"></script>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">FitTrack</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li id="registerNavItem"><a href="register.html">Register</a></li>
+      <li id="loginNavItem"><a href="index.html">Login</a></li>
+      <li id="profileNavItem" style="display: none;"><a href="profile.html" class="active">Profile</a></li>
+      <li><a href="bmi.html">BMI</a></li>
+      <li><a href="tracker.html">Tracker</a></li>
+      <li><a href="premium.html">Premium</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="profile-container">
+  <div class="profile-box">
+    <h2>My Profile</h2>
+    <p class="info-text">This page will later show your account details and subscription information.</p>
+
+    <div class="profile-section">
+      <h3>Basic Information</h3>
+      <p><strong>First Name:</strong> <span id="profileFirstName">-</span></p>
+      <p><strong>Last Name:</strong> <span id="profileLastName">-</span></p>
+      <p><strong>Email:</strong> <span id="profileEmail">-</span></p>
+      <p><strong>Phone:</strong> <span id="profilePhone">-</span></p>
+      <p><strong>Gender:</strong> <span id="profileGender">-</span></p>
+    </div>
+
+    <div class="profile-section">
+      <h3>Subscription</h3>
+      <p><strong>Plan:</strong> <span id="profilePlan">-</span></p>
+      <p><strong>Subscription Type:</strong> <span id="profileSubscriptionType">-</span></p>
+    </div>
+
+    <button id="logoutBtn" class="profile-btn">Logout</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 FitTrack. All rights reserved.</p>
+</footer>
+</body>
+</html>

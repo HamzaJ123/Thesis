@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitTrack | BMI Calculator</title>
+    <link rel="stylesheet" href="../css/bmi.css" />
+    <script defer src="../js/bmi.js"></script>
+    <script defer src="../js/navbar.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">FitTrack</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li id="registerNavItem"><a href="register.html">Register</a></li>
+            <li id="loginNavItem"><a href="index.html">Login</a></li>
+            <li id="profileNavItem" style="display: none;"><a href="profile.html">Profile</a></li>
+            <li><a href="bmi.html" class="active">BMI</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+            <li><a href="premium.html">Premium</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- BMI Section -->
+<section class="bmi-container">
+    <div class="bmi-box">
+        <h2>Body Mass Index (BMI) Calculator</h2>
+        <p>Enter your details below to check your BMI and health category.</p>
+
+        <form id="bmiForm" novalidate>
+            <div class="input-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" placeholder="Enter your height" required />
+            </div>
+
+            <div class="input-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" placeholder="Enter your weight" required />
+            </div>
+
+            <button type="submit" class="bmi-btn">Calculate BMI</button>
+        </form>
+
+        <div class="bmi-result">
+            <h3 id="resultText"></h3>
+            <p id="classification"></p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 FitTrack. All rights reserved.</p>
+</footer>
+</body>
+</html>

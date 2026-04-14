@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitTrack | Calorie Tracker</title>
+    <link rel="stylesheet" href="../css/tracker.css" />
+    <script defer src="../js/tracker.js"></script>
+    <script defer src="../js/navbar.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">FitTrack</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li id="registerNavItem"><a href="register.html">Register</a></li>
+            <li id="loginNavItem"><a href="index.html">Login</a></li>
+            <li id="profileNavItem" style="display: none;"><a href="profile.html">Profile</a></li>
+            <li><a href="bmi.html">BMI</a></li>
+            <li><a href="tracker.html" class="active">Tracker</a></li>
+            <li><a href="premium.html">Premium</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Tracker Section -->
+<section class="tracker-container">
+    <div class="tracker-box">
+        <h2 id="trackerTitle">Calorie Tracker (Guest Mode)</h2>
+        <p id="trackerInfo" class="info">Search meals to get calories automatically. Guests can log up to 3 meals per day.</p>
+
+        <!-- Search and Add -->
+        <form id="trackerForm">
+            <div class="input-group">
+                <label for="mealSearch">Search Meal</label>
+                <input type="text" id="mealSearch" list="mealSuggestions" placeholder="e.g., Chicken, Rice..." required />
+                <datalist id="mealSuggestions"></datalist>
+            </div>
+
+            <div class="input-group">
+                <label for="calories">Calories (auto-filled)</label>
+                <input type="text" id="calories" readonly />
+            </div>
+
+            <div class="input-group">
+                <label for="grams">Grams</label>
+                <input type="number" id="grams" placeholder="e.g., 100" min="1" value="100" required />
+            </div>
+
+            <button type="submit" class="add-btn">Add Meal</button>
+        </form>
+
+        <!-- Guest Limit -->
+        <p id="guestLimitText" class="guest-limit">Guest users can log <strong>3 meals per day.</strong> Upgrade for unlimited access.</p>
+
+        <!-- Meals List -->
+        <div class="meal-list">
+            <h3>Today's Meals</h3>
+            <ul id="mealItems"></ul>
+            <p id="totalCalories">Total Calories: 0 kcal</p>
+        </div>
+
+        <!-- Personalized Daily Calories -->
+        <div class="calorie-recommendation">
+            <h3>Personalized Daily Calorie Recommendation</h3>
+
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Enter your age" min="1" />
+            </div>
+
+            <div class="input-group">
+                <label for="userHeight">Height (cm)</label>
+                <input type="number" id="userHeight" placeholder="Enter your height" min="1" />
+            </div>
+
+            <div class="input-group">
+                <label for="userWeight">Weight (kg)</label>
+                <input type="number" id="userWeight" placeholder="Enter your weight" min="1" />
+            </div>
+
+            <div class="input-group">
+                <label for="activityLevel">Activity Level</label>
+                <select id="activityLevel">
+                    <option value="">Select activity level</option>
+                    <option value="1.2">Sedentary</option>
+                    <option value="1.375">Lightly Active</option>
+                    <option value="1.55">Moderately Active</option>
+                    <option value="1.725">Very Active</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="goal">Goal</label>
+                <select id="goal">
+                    <option value="">Select your goal</option>
+                    <option value="lose">Lose Weight</option>
+                    <option value="maintain">Maintain Weight</option>
+                    <option value="gain">Gain Weight</option>
+                </select>
+            </div>
+
+            <button type="button" id="calculateCaloriesBtn" class="add-btn">Calculate Daily Calories</button>
+
+            <div class="meal-list">
+                <p id="calorieResult">Recommended Calories: -</p>
+                <p id="bmrResult">BMR: -</p>
+            </div>
+        </div>
+
+        <button id="goPremium" class="premium-btn">Go Premium</button>
+    </div>
+</section>
+
+<!-- Premium Modal -->
+<div id="premiumModal" class="modal">
+    <div class="modal-content">
+        <h2>Unlock Full Features</h2>
+        <p>Get unlimited meal tracking and personalized calorie plans with FitTrack Premium.</p>
+        <button id="continueBtn">Continue with Premium</button>
+        <button id="closeModal" class="close-btn">Cancel</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 FitTrack. All rights reserved.</p>
+</footer>
+</body>
+</html>

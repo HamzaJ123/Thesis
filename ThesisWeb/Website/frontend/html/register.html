@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitTrack | Register</title>
+    <link rel="stylesheet" href="../css/register.css" />
+    <script defer src="../js/register.js"></script>
+    <script defer src="../js/navbar.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">FitTrack</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li id="registerNavItem"><a href="register.html" class="active">Register</a></li>
+            <li id="loginNavItem"><a href="index.html">Login</a></li>
+            <li id="profileNavItem" style="display: none;"><a href="profile.html">Profile</a></li>
+            <li><a href="bmi.html">BMI</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+            <li><a href="premium.html">Premium</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Register Section -->
+<section class="register-container">
+    <div class="form-box">
+        <h2>Create Your Account</h2>
+        <p>All fields are required to proceed.</p>
+
+        <form id="registerForm" novalidate>
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="Enter your first name" required />
+            </div>
+
+            <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Enter your last name" required />
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required />
+            </div>
+
+            <div class="input-group">
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required />
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Re-enter your password" required />
+            </div>
+
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+
+        <p id="message"></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 FitTrack. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
