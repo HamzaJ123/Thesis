@@ -3,7 +3,7 @@ const registerNavItem = document.getElementById("registerNavItem");
 const loginNavItem = document.getElementById("loginNavItem");
 const profileNavItem = document.getElementById("profileNavItem");
 
-// Force correct navbar state on Premium page
+//Force correct navbar state on Premium page
 if (isLoggedIn) {
     if (registerNavItem) registerNavItem.style.display = "none";
     if (loginNavItem) loginNavItem.style.display = "none";

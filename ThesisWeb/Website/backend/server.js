@@ -9,41 +9,34 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/auth.js";
 import mealRoutes from "./routes/meals.js";
 
-// Environment setup
+//environment setup
 dotenv.config();
 
-// Express app
+//express app
 const app = express();
 
-// Middleware
+//Middleware
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
+//Connecting to mongoDB
 connectDB();
 
-// API Routes
+//API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/meals", mealRoutes);
 
-// ==============================
-// ✅ Serve Frontend Files
-// ==============================
 
-// Resolve paths
+
+//Resolving paths
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Serve static files from frontend folder
+//serve static files from frontend folder
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// When visiting any unknown route, serve index.html
+//when visiting any unknown route, serve index.html
 app.use(express.static(path.join(__dirname, "../frontend/html")));
-
-
-// ==============================
-// ✅ Start Server
-// ==============================
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

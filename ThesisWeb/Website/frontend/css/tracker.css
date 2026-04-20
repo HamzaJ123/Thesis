@@ -45,7 +45,7 @@ body {
     color: #ffcc00;
 }
 
-/* Tracker Section */
+/* Tracker section */
 .tracker-container {
     display: flex;
     justify-content: center;
@@ -149,7 +149,7 @@ input:focus {
     font-weight: 600;
 }
 
-/* Premium Modal */
+/* Premium modal */
 .modal {
     display: none;
     position: fixed;
@@ -212,7 +212,7 @@ input:focus {
     background-color: #b3b3b3;
 }
 
-/* Premium Button */
+/* Premium button */
 .premium-btn {
     margin-top: 20px;
     background-color: #101820;

@@ -4,7 +4,7 @@ const closeBtn = document.querySelector(".close");
 const loginForm = document.getElementById("loginForm");
 const loginMessage = document.getElementById("loginMessage");
 
-// Open login modal
+//Open login modal
 if (loginBtn) {
     loginBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -12,21 +12,21 @@ if (loginBtn) {
     });
 }
 
-// Close with X
+//close with X
 if (closeBtn) {
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
     });
 }
 
-// Close by clicking outside modal
+//Close by clicking outside modal
 window.addEventListener("click", (event) => {
     if (event.target === modal) {
         modal.style.display = "none";
     }
 });
 
-// Handle login
+//Handle login
 if (loginForm) {
     loginForm.addEventListener("submit", async (e) => {
         e.preventDefault();

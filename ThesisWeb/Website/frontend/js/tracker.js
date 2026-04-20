@@ -171,7 +171,7 @@ const mealSuggestions = document.getElementById("mealSuggestions");
 
 let total = 0;
 
-// Fill dropdown suggestions from meal database
+//Fill dropdown suggestions from meal database
 if (mealSuggestions) {
     mealSuggestions.innerHTML = "";
 
@@ -182,7 +182,7 @@ if (mealSuggestions) {
     });
 }
 
-// Navbar state fallback
+//Navbar fallback
 if (isLoggedIn) {
     if (registerNavItem) registerNavItem.style.display = "none";
     if (loginNavItem) loginNavItem.style.display = "none";
@@ -193,7 +193,7 @@ if (isLoggedIn) {
     if (profileNavItem) profileNavItem.style.display = "none";
 }
 
-// Logged-in users should not see guest-only content
+//Logged-in  users should not see guest only content
 if (isLoggedIn) {
     if (trackerTitle) trackerTitle.textContent = "Calorie Tracker";
     if (trackerInfo) {
@@ -203,10 +203,10 @@ if (isLoggedIn) {
     if (goPremiumBtn) goPremiumBtn.style.display = "none";
 }
 
-// Guest meal count
+//Guest meal count
 let mealCount = parseInt(localStorage.getItem("guestMealCount")) || 0;
 
-// Search for meal and auto-fill calories
+//Search for meal and auto fill calories
 mealSearch.addEventListener("input", () => {
     const query = mealSearch.value.trim().toLowerCase();
     const foundMeal = mealDatabase.find((meal) =>
@@ -223,7 +223,7 @@ mealSearch.addEventListener("input", () => {
     }
 });
 
-// Load real meals for logged-in user
+//Load real meals for logged in user
 async function loadMeals() {
     if (!isLoggedIn || !token) return;
 
@@ -258,7 +258,7 @@ async function loadMeals() {
     }
 }
 
-// Add meal
+//Add meal
 trackerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -268,7 +268,7 @@ trackerForm.addEventListener("submit", async (e) => {
 
     if (!meal || !calories || !grams) return;
 
-    // Guest mode
+    //Guest mode
     if (!isLoggedIn) {
         if (mealCount >= 3) {
             localStorage.setItem("redirectAfterRegister", "premium");
@@ -291,7 +291,7 @@ trackerForm.addEventListener("submit", async (e) => {
         return;
     }
 
-    // Logged-in mode: save to backend
+    //Logged in mode: save to backend
     try {
         const response = await fetch("/api/meals", {
             method: "POST",
@@ -330,7 +330,7 @@ trackerForm.addEventListener("submit", async (e) => {
     }
 });
 
-// Premium modal actions
+//Premium modal actions
 if (continueBtn) {
     continueBtn.onclick = () => {
         localStorage.setItem("redirectAfterRegister", "premium");
@@ -350,7 +350,7 @@ window.onclick = (event) => {
     }
 };
 
-// Manual Go Premium button
+//Manual Go Premium button
 if (goPremiumBtn) {
     goPremiumBtn.onclick = () => {
         localStorage.setItem("redirectAfterRegister", "premium");
@@ -358,7 +358,7 @@ if (goPremiumBtn) {
     };
 }
 
-// Personalized calorie recommendation
+//Personalized calorie recommendation
 if (calculateCaloriesBtn) {
     calculateCaloriesBtn.addEventListener("click", () => {
         const age = parseInt(ageInput.value);
@@ -396,5 +396,5 @@ if (calculateCaloriesBtn) {
     });
 }
 
-// Initial load for logged-in users
+//Initial load for logged-in users
 loadMeals();

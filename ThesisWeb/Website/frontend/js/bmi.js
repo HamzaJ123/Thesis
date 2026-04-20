@@ -8,7 +8,7 @@ bmiForm.addEventListener("submit", (e) => {
     const height = parseFloat(document.getElementById("height").value);
     const weight = parseFloat(document.getElementById("weight").value);
 
-    // Validate input
+    //validate input
     if (!height || !weight || height <= 0 || weight <= 0) {
         resultText.textContent = "Please enter valid height and weight!";
         resultText.style.color = "red";
@@ -16,7 +16,7 @@ bmiForm.addEventListener("submit", (e) => {
         return;
     }
 
-    // BMI formula
+    //BMI formula
     const bmi = (weight / ((height / 100) ** 2)).toFixed(1);
     resultText.textContent = `Your BMI: ${bmi}`;
     resultText.style.color = "#101820";

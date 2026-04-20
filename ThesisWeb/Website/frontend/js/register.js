@@ -6,7 +6,7 @@ form.addEventListener("submit", async (e) => {
     message.textContent = "";
     message.style.color = "";
 
-    // Collect form data
+    //Collect form data
     const userData = {
         firstName: document.getElementById("firstName").value.trim(),
         lastName: document.getElementById("lastName").value.trim(),
@@ -34,7 +34,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     try {
-        // Send to backend
+        //Send to backend
         const response = await fetch("http://localhost:5000/api/auth/register", {
             method: "POST",
             headers: {
@@ -51,7 +51,7 @@ form.addEventListener("submit", async (e) => {
             return;
         }
 
-        // Save token (optional, temporary)
+        //Save token
         localStorage.setItem("token", data.token);
         localStorage.setItem("userEmail", data.user.email);
         localStorage.setItem("userFirstName", data.user.firstName);
@@ -60,7 +60,7 @@ form.addEventListener("submit", async (e) => {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("userGender", userData.gender);
 
-        // Success message
+        //Success message
         message.textContent = "Registration successful!";
         message.style.color = "green";
 

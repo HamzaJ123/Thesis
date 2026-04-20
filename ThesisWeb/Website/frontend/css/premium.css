@@ -45,7 +45,7 @@ body {
     color: #ffcc00;
 }
 
-/* Premium Section */
+/* Premium section */
 .premium-container {
     text-align: center;
     padding: 60px 20px;
@@ -235,7 +235,7 @@ input {
     background-color: #b3b3b3;
 }
 
-/* Success Screen */
+/* Success screen */
 .success {
     display: none;
     text-align: center;
@@ -250,7 +250,7 @@ input {
     margin-bottom: 20px;
 }
 
-/* Footer */
+/* footer */
 footer {
     text-align: center;
     background-color: #101820;
